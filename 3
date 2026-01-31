@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Repair</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial;background:#0b0f1a;color:white;text-align:center}
+button,input,textarea{width:90%;padding:12px;margin:10px;border-radius:10px;border:none}
+button{background:#1e88e5;color:white}
+</style>
+</head>
+
+<body>
+<h1>Computer Repair</h1>
+
+<input id="name" placeholder="Your Name">
+<textarea id="issue" placeholder="Computer Problem"></textarea>
+<button onclick="send()">Send on WhatsApp</button>
+
+<script>
+function send(){
+window.open(`https://wa.me/919336978841?text=Computer Repair Request`);
+}
+</script>
+</body>
+</html>
