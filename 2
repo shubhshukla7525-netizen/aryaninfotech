@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laptop Repair | Aryan Infotech</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b0f1a;
+    color:white;
+}
+header{
+    padding:40px 20px;
+    text-align:center;
+    background:#0d47a1;
+}
+section{
+    padding:40px 20px;
+    max-width:600px;
+    margin:auto;
+    text-align:center;
+}
+button,a{
+    display:block;
+    margin:15px auto;
+    padding:12px 25px;
+    border-radius:30px;
+    background:#1e88e5;
+    color:white;
+    text-decoration:none;
+    border:none;
+    font-size:16px;
+}
+button:hover,a:hover{
+    background:#1565c0;
+}
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Laptop Repair Service</h1>
+    <p>Contact Aryan Infotech</p>
+</header>
+
+<section>
+    <p>Describe your laptop problem and contact us.</p>
+
+    <!-- CONTACT FORM (WhatsApp) -->
+    <form onsubmit="sendWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="text" id="problem" placeholder="Laptop Problem" required>
+        <textarea id="message" placeholder="Additional details"></textarea>
+        <button type="submit">Send on WhatsApp</button>
+    </form>
+
+    <a href="tel:9336978841">📞 Call Now</a>
+    <a href="mailto:aryanvimal56@gmail.com">📧 Email Us</a>
+</section>
+
+<script>
+function sendWhatsApp(){
+    let name = document.getElementById("name").value;
+    let problem = document.getElementById("problem").value;
+    let message = document.getElementById("message").value;
+
+    let text = `Name: ${name}%0AProblem: ${problem}%0AMessage: ${message}`;
+    window.open(`https://wa.me/919336978841?text=${text}`, "_blank");
+}
+</script>
+
+</body>
+</html>
